@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+		<pattern>%.-1level-%d{yyyy/MM/dd HH:mm:ss.SSS}- sample - ms - %c{30} - %m%n</pattern>
+        </encoder>
+    </appender>
+
+	<logger name="mx.com.smnyl.api" level="DEBUG" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="logging.level.org.springframework" level="DEBUG" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+		
+	<logger name="ch.qos.logback.classic" level="WARN" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<logger name="ch.qos.logback.core" level="WARN" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+		
+	<root level="error">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
